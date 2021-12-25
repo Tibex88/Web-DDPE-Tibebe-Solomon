@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SVG</title>
+    </head>
+
+<BODY>
+<FIELDSET>
+    <LEGEND>Animate transform</LEGEND>
+<svg width="120" height="120" viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 60 70"
+                          to="360 60 70"
+                          dur="10s"
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+</FIELDSET>
+
+
+<fieldset>
+    <legend>Rectangles</legend>
+    <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simple rectangle -->
+        <rect width="100" height="100" />
+      
+        <!-- Rounded corner rectangle -->
+        <rect x="120" width="100" height="100" rx="15" />
+      </svg>
+      
+</fieldset>
+
+<fieldset>
+    <legend>Marker</legend>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- arrowhead marker definition -->
+          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+              markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+      
+          <!-- simple dot marker definition -->
+          <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+              markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="5" fill="red" />
+          </marker>
+        </defs>
+      
+        <!-- Coordinate axes with a arrowhead in both direction -->
+        <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
+         marker-start="url(#arrow)" marker-end="url(#arrow)"  />
+      
+        <!-- Data line with polymarkers -->
+        <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
+         marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+      </svg>
+      
+</fieldset>
+
+
+    <h2>Radial gradient</h2> 
+        <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="10%" stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </radialGradient>
+  </defs>
+
+  <!-- using my radial gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+</svg>
+
+
+
+</BODY>
+</html>
+

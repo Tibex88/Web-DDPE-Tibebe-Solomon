@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Reservation and Pizza Delivery</title>
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <H1> Room Reservation</H1>
+            </td>
+            <td width="1000px" align="right">
+                <p>
+                    <a href="index.html">Home page</a>|
+                    <a href="application.html">Job Application Form</a>|
+                    <a href="Feedback.html">Feedback Form</a>|
+                   
+                </p>
+            </td>
+        </tr>
+    </table>
+    <hr />
+
+    <table align="left" width="50%">
+        <tr>
+            <td>
+    <div>
+        <h1>Reservation Request</h1>
+        <form action="">
+            <fieldset>
+            <legend>General Information</legend>
+            <div>
+                <label for="date">Arrival Date: </label>
+                <input type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" name="date" id="date" size="25rem" />
+            </div>
+            <br />
+            <div>
+                <label for="nights">Nights: </label>
+                <input type="number" name="nights" id="nights" min="1" max="30" />
+            </div>
+            <br />
+            <div>
+                <label for="adults">Adults: </label>
+                <input type="number" name="adults" id="adults" min="1" size="3rem" />
+            </div>
+            <br />
+            <div>
+                <label for="children">Children: </label>
+                <input type="number" name="children" id="children" min="1" size="3rem" />
+            </fieldset>
+            </div>
+            <fieldset>
+            <legend>Preferences</legend>
+            <div>
+                <label for="">Room Type: </label>
+                <input type="radio" name="room" id="standard" />
+                <label for="standard">Standard</label>
+                <input type="radio" name="room" id="business" />
+                <label for="business">Business</label>
+                <input type="radio" name="room" id="suite" />
+                <label for="suite">Suite</label>
+            </div>
+            <br />
+            <div>
+                <label for="bed">Bed Type: </label>
+                <input type="radio" name="bed" id="king" />
+                <label for="king">King</label>
+                <input type="radio" name="bed" id="double" />
+                <label for="double">Double Double</label>
+            </div>
+            <br />
+            <div>
+                <input type="checkbox" name="smoking" id="smoking" />
+                <label for="smoking">Smoking</label>
+            </fieldset>
+            </div>
+            <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label for="fullname">Name:</label>
+                <input type="text" name="fullname" id="fullname" required placeholder=" Full Name" />
+            </div>
+            <br />
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder=" E-mail Address" />
+            </div>
+            <br />
+            <div>
+                <label for="phone">Phone: </label>
+                <input type="tel" name="phone" id="phone" placeholder=" 251-912345678" pattern="[0-9]{3}-[0-9]{9}" />
+            </fieldset>
+            </div>
+            <br />
+            <button type="submit">Submit Reservation</button>
+            <button type="reset">Clear</button>
+            <br />
+        </form>
+        </td>
+        </tr>
+    </table>
+
+        <table align="right">
+        <form action="" >
+            <h1 align="center">Pizza Delivery</h1>
+            <h2 align="center">Online Order Form</h2>
+
+            <div align="center">
+                <label for="name">*Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" id="name" required />
+                <label for="tel">
+            &nbsp;&nbsp;&nbsp; *Tel: &nbsp;&nbsp;&nbsp;&nbsp;</label
+          >
+          <input type="tel" name="tel" id="tel" required />
+        </div>
+        <br />
+        <div align="center">
+          <label for="address">*Address: &nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="address" id="address" required />
+                <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;*Email: </label>
+                <input type="email" name="mail" id="mail" />
+            </div>
+            <br />
+            <div align="center">
+                <label for="town">*Town/City: </label>
+                <input type="text" name="town" id="town" />
+            </div>
+            <br />
+            <div align="center">
+                <label for="post">*Postcode: &nbsp;&nbsp;</label>
+                <input type="text" name="post" id="post" pattern="\d{5}" />
+            </div>
+            <p align="center">* - Required Fields</p>
+            <br />
+            <table align="center" border="1">
+                <tr align="center">
+                    <td width="200px"><label for="topping">Topping</label></td>
+                    <td width="200px"><label for="size">Size</label></td>
+                    <td width="200px"><label for="extras">Extras</label></td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <input type="radio" name="topping" id="margherita" />
+                        <label for="margherita">Margherita</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="size" id="small" />
+                        <label for="small">Small</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="extras" id="mushrooms" />
+                        <label for="mushrooms">Mushrooms</label>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <input type="radio" name="topping" id="four-seasons" />
+                        <label for="four-seasons">Four Seasons</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="size" id="medium" />
+                        <label for="medium">Medium</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="extras" id="green-peppers" />
+                        <label for="green-peppers">Green Peppers</label>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <input type="radio" name="topping" id="meat-feast" />
+                        <label for="meat-feast">Meat Feast</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="size" id="large" />
+                        <label for="large">Large</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="extras" id="Anchovies" />
+                        <label for="Anchovies">Anchovies</label>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="extras" id="extra-cheese" />
+                        <label for="extra-cheese">Extra Cheese</label>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table align="center">
+                <tr>
+                    <td width="180px">
+                        <label for="delivery">Preferred Delivery Time</label>
+                    </td>
+                    <td width="300px">
+                        <input type="time" name="delivery" id="delivery" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="textarea">Delivery Instructions or Address</label>
+                    </td>
+                    <td>
+                        <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div align="right">
+                <button type="submit">Submit Order</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </table>
+    <table align="center">
+        <tr>
+            <td align="right" width="300px">
+                <p>
+                    Follow Us On: <a href="">Facebook</a>|
+                    <a href="">Twitter</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                Copyright © AASTU SEng 2021, All Rights Reserved
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
