@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 
 <HTML>
+<style>
+.person
+{
+    background-color: orange;
+    border-radius: 5px;
+    margin-right:5px;
 
-    <HEAD>
+}
+</style>
+    <head>
 
     <TITLE>Eric Hoffner</TITLE>
 
@@ -14,7 +22,7 @@
 
 <meta name="Author Info"  content="Tibebe Solomon"
 
-    </HEAD>
+    </head>
 
 <body>
 
@@ -64,11 +72,11 @@
 
 <form>
     <label for="Fullname">Fullname</label><br>
-        <input type="text" required maxlength="50" size="50%" id="Fullname" /><br>
+        <input  type="text" required maxlength="50" size="50%" id="Fullname" /><br>
     <label for="phone">Phone<br>
-        <input id="phone" type="telephone" required  size="50%"/><br></label>
+        <input id="phone" type="phone" required  size="50%"/><br></label>
     <label for="age">Age<br>
-        <input id="age" type="" max="100" min="18" required size="50%" /><br></label>
+        <input id="age" type="number" max="100" min="18" required size="50%" /><br></label>
     <label for="color"> Your favourite color</label><br>
 <input id="color" type="color" size="50%"/><br>
         
@@ -118,12 +126,15 @@
     <label for="description"><br> Describe yourself<br></label>
 <textarea  rows="5" col="500" id="description">
     </textarea><br>
-    <button>Submit</button> <button>Reset</button>
 
+   <input type="reset" >
+
+   <div id= "person"></div>
 
 </form>
 
-
+<input type="submit" id="subm" value="Submit">
+<div id="make"></div>
 
     </td>
 
@@ -205,6 +216,31 @@ Third 1GB Mobile Data
         </td>
     </tr>
 </table>
+
+<script >
+     const  newHTML = function () {
+    function inputDisplay() {
+        this.fullName = document.getElementById('Fullname').value;
+        this.phone = document.getElementById('phone').value;
+        this.age = document.getElementById('age').value;
+
+
+    }
+    var  Obj = new  inputDisplay();
+
+    var create = function () {
+        parent = document.getElementById('make');
+        const div = document.createElement('div');
+        div.classList.add('person');
+        div.innerHTML = `<h1>Full Name: ${Obj.fullName}</h1><h1>Age: ${Obj.age}</h1><h1>Phone: ${Obj.phone}</h1>`;
+        parent.appendChild(div)
+    }
+     create();
+}
+document.getElementById('subm').addEventListener('click', newHTML); 
+
+    </script>
+</script>
 
     </body>
     
